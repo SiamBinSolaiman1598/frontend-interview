@@ -1239,12 +1239,38 @@ const trialCategories = [
 
 
 const AllBlogs = () => {
-  const [blogs, setBlogs] = useState(trialAllBlogs);
-  const [categories, setCategories] = useState(trialCategories);
+  const [blogs, setBlogs] = useState([]);
+  const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [filteredBlogs, setFilteredBlogs] = useState([])
-
+  useEffect(() => {
+    setLoading(true);
+    fetch('https://hr.mediusware.xyz/api/website/blogs/')
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("check for fetch")
+        setBlogs(data.results);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error('Error fetching blogs:', err);
+        setLoading(false);
+      });
+  }, []); useEffect(() => {
+    setLoading(true);
+    fetch('https://hr.mediusware.xyz/api/website/blogs/categories/')
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("check for fetch", data)
+        setCategories(data);
+        // setLoading(false);
+      })
+      .catch((err) => {
+        console.error('Error fetching blogs:', err);
+        // setLoading(false);
+      });
+  }, []);
   useEffect(() => {
     if (selectedCategory === "All") {
       setFilteredBlogs(blogs);
