@@ -1243,13 +1243,14 @@ const AllBlogs = () => {
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const [filteredBlogs, setFilteredBlogs] = useState([])
+  const [filteredBlogs, setFilteredBlogs] = useState([]);
+  const [allDataUrl, setallDataUrl] = useState('https://hr.mediusware.xyz/api/website/blogs/');
   useEffect(() => {
     setLoading(true);
-    fetch('https://hr.mediusware.xyz/api/website/blogs/')
+    fetch(allDataUrl)
       .then((res) => res.json())
       .then((data) => {
-        console.log("check for fetch")
+        console.log("check for fetch", data)
         setBlogs(data.results);
         setLoading(false);
       })
@@ -1257,12 +1258,13 @@ const AllBlogs = () => {
         console.error('Error fetching blogs:', err);
         setLoading(false);
       });
-  }, []); useEffect(() => {
+  }, [allDataUrl, selectedCategory]);
+  useEffect(() => {
     setLoading(true);
     fetch('https://hr.mediusware.xyz/api/website/blogs/categories/')
       .then((res) => res.json())
       .then((data) => {
-        console.log("check for fetch", data)
+        // console.log("check for fetch", data)
         setCategories(data);
         // setLoading(false);
       })
@@ -1287,7 +1289,8 @@ const AllBlogs = () => {
       setFilteredBlogs(filtered);
     }
 
-  }, [selectedCategory])
+  }, [selectedCategory, blogs]);
+  if (loading) return <p>Loading blogs...</p>;
   return (
     <div className="container">
       <div className="text-center">
