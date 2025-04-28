@@ -46,19 +46,20 @@ const ContactForm = () => {
                 <div className="flex flex-col md:flex-row justify-center gap-10">
                     <div className="md:w-1/2">
                         <h1 className="text-[60px] font-bold text-white mb-4">Do You Want to Start a Project?</h1>
-                        <p className="mb-8 text-2xl text-white">
+                        <p className="mb-[44px] text-2xl text-white ">
                             Drop us a line for your project or share news about your company.
                             Yes, we check this mailbox frequently!
                         </p>
-                        <div className="flex gap-4">
+                        <div className='border-b border-white'></div>
+                        <div className="flex gap-4 mt-5 w-[70%]">
                             {[
                                 { title: '10+', subtitle: 'Years in business' },
                                 { title: '100+', subtitle: 'In-house employees' },
                                 { title: '250+', subtitle: 'Successful projects' },
                             ].map((stat, i) => (
-                                <div key={i} className="bg-white rounded-lg p-4 text-center shadow-md">
-                                    <p className="text-2xl font-bold text-blue-700">{stat.title}</p>
-                                    <p className="text-lg text-green-400">{stat.subtitle}</p>
+                                <div key={i} className="bg-white rounded-lg p-4 text-start shadow-md">
+                                    <p className="text-xl font-bold text-blue-700">{stat.title}</p>
+                                    <p className="text-base text-emerald-600">{stat.subtitle}</p>
                                 </div>
                             ))}
                         </div>
