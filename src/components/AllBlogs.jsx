@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import BlogCard from "./BlogCard";
+import BlogCard from "./BlogCard"; import ContactFrom from "./ContactFrom";
+
 const trialAllBlogs = [
   {
     "id": 6,
@@ -1297,6 +1298,8 @@ const AllBlogs = () => {
         {filteredBlogs.map((blog) => (
           <BlogCard key={blog.id} blog={blog} />
         ))}
+      </div> <div className="py-28">
+        <ContactFrom />
       </div>
     </div>
   );
