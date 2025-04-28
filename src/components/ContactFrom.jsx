@@ -41,11 +41,11 @@ const ContactForm = () => {
     };
 
     return (
-        <section className="bg-blue-300 dark:bg-slate-800 rounded-xl">
+        <section className="bg-gradient-to-r from-blue-800 via-blue-400 to-blue-500  dark:bg-slate-800 rounded-xl">
             <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
                 <div className="flex flex-col md:flex-row justify-center gap-10">
                     <div className="md:w-1/2">
-                        <h1 className="text-4xl font-bold text-white mb-4">Do You Want to Start a Project?</h1>
+                        <h1 className="text-[60px] font-bold text-white mb-4">Do You Want to Start a Project?</h1>
                         <p className="mb-8 text-2xl text-white">
                             Drop us a line for your project or share news about your company.
                             Yes, we check this mailbox frequently!
@@ -65,7 +65,7 @@ const ContactForm = () => {
                     </div>
 
                     <div className="bg-white dark:bg-slate-900 p-8 rounded-xl shadow-lg md:w-1/2">
-                        <h2 className="text-2xl font-bold text-blue-400 mb-6">Get 20% OFF Your First Project!</h2>
+                        <h2 className="text-3xl font-bold text-blue-800 mb-6">Get 20% OFF Your First Project!</h2>
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div>
                                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
