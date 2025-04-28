@@ -41,7 +41,7 @@ const ContactForm = () => {
     };
 
     return (
-        <section className="bg-gradient-to-r from-blue-800 via-blue-400 to-blue-500  dark:bg-slate-800 rounded-xl">
+        <section className="bg-gradient-to-r from-blue-800 via-blue-400 to-cyan-500  dark:bg-slate-800 rounded-xl">
             <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
                 <div className="flex flex-col md:flex-row justify-center gap-10">
                     <div className="md:w-2/3">
