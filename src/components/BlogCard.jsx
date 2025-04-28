@@ -1,5 +1,5 @@
 import React from 'react'
-import { FiArrowRight } from 'react-icons/fi'
+import { FiArrowRight } from 'react-icons/fi'; import { FaRegClock } from "react-icons/fa";
 export default function BlogCard({ blog }) {
     console.log("blog", blog)
     const formatDate = (date) => {
@@ -25,8 +25,8 @@ export default function BlogCard({ blog }) {
             </div>
 
             {/* Read Time */}
-            <p className="absolute top-0 -right-3 bg-white text-blue-900 font-semibold text-sm px-3 py-1 pr-10 rounded-b-xl shadow">
-                {blog.read_time_minute} min read
+            <p className="absolute top-0 -right-3 bg-white text-blue-900 font-semibold text-sm px-3 py-2 pr-10 rounded-b-xl shadow flex items-center justify-between gap-2">
+                <span><FaRegClock className='text-blue-900 ' /></span> {blog.read_time_minute} min read
             </p>
 
             {/* Bottom Info */}
