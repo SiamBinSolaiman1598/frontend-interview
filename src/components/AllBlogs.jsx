@@ -1300,7 +1300,7 @@ const AllBlogs = () => {
           <BlogCard key={blog.id} blog={blog} />
         ))}
       </div>
-      <div className="flex items-center justify-center mt-20"><button className="bg-blue-700 w-fit pl-5 rounded-lg pr-5 py-2  hover:pl-10 hover:w-[70x] transition-all duration-300 ease-in-out">
+      <div className="flex items-center justify-center md:mt-20 mt-10"><button className="bg-blue-700 w-fit pl-5 rounded-lg pr-5 py-2  hover:pl-10 hover:w-[70x] transition-all duration-300 ease-in-out">
         <FiArrowRight className="text-white text-2xl" />
       </button></div>
       <div className="py-28">
