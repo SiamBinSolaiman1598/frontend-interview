@@ -44,7 +44,7 @@ const ContactForm = () => {
         <section className="bg-gradient-to-r from-blue-800 via-blue-400 to-blue-500  dark:bg-slate-800 rounded-xl">
             <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
                 <div className="flex flex-col md:flex-row justify-center gap-10">
-                    <div className="md:w-1/2">
+                    <div className="md:w-2/3">
                         <h1 className="text-[60px] font-bold text-white mb-4">Do You Want to Start a Project?</h1>
                         <p className="mb-[44px] text-2xl text-white ">
                             Drop us a line for your project or share news about your company.
@@ -63,9 +63,16 @@ const ContactForm = () => {
                                 </div>
                             ))}
                         </div>
+
+                        <div className='flex items-center justify-start gap-20 md:mt-20 mt-10'>
+                            <div><p className='text-white font-bold text-3xl'>Clutch</p></div>
+                            <div><p className='text-white font-bold text-3xl'>Top Rated Plus</p>
+                                <p className='font-bold text-3xl'><span className='text-green-500 '>Up</span>Work</p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div className="bg-white dark:bg-slate-900 p-8 rounded-xl shadow-lg md:w-1/2">
+                    <div className="bg-white dark:bg-slate-900 p-8 rounded-xl shadow-lg md:w-1/3">
                         <h2 className="text-3xl font-bold text-blue-800 mb-6">Get 20% OFF Your First Project!</h2>
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div>
